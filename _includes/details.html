@@ -1,0 +1,225 @@
+<section id="introduction" class="introduction bg-landing bg-whitish">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 wtm-blue ">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="introduction-item">
+              <span class="fa-stack fa-4x">
+              <!--<i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-calendar fa-stack-1x" style="color: #ffffff;"></i>-->
+              <img src="img/iconos/logoAgenda.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_full1"/>
+              <img src="img/iconos/logoAgenda.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_mobile1"/>
+            </span>
+              <h4>
+                <strong>9 de noviembre de 2024</strong>
+              </h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="introduction-item">
+              <span class="fa-stack fa-4x">
+              <!--<i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-map-marker fa-stack-1x" style="color: #ffffff;"></i>-->
+              <img src="img/iconos/logoDonde.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_full1"/>
+              <img src="img/iconos/logoDonde.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_mobile1"/>
+            </span>
+              <h4>
+                <strong>ETOPIA<br/>Centro de Arte y Tecnología</strong>
+              </h4>
+              <p>Av. de la Ciudad de Soria, 8 (50003) Zaragoza</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="introduction-item">
+              <span class="fa-stack fa-4x">
+                <!--<i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-ticket fa-stack-1x" style="color: #ffffff;"></i>-->
+                <img src="img/iconos/logoTicket2.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_full1"/>
+                <img src="img/iconos/logoTicket2.png" style="/*max-width: 90%;*/max-width: 100%;" class="image_mobile1"/>
+              </span>
+
+              <p id="detalles_hora_real_servidor" hidden></p>
+
+              <p id="detalles_entradas_agotadas" hidden>{{ site.sold_out_tickets }}</p>
+              <p id="detalles_entradas_agotadas_primera" hidden>{{ site.sold_out_tickets_first }}</p>
+
+              <div id="texto_detalles_entradas_proximamente" style="display: block;">
+                <h4>
+                  <strong>Entradas disponibles <br/> PRÓXIMAMENTE</strong>
+                </h4>
+                <!--
+                <h4>
+                  <strong>Entradas disponibles <br/>proximamente</strong>
+                </h4>
+                -->
+                <!--
+                <h4>
+                  <strong>Entradas disponibles <br/> lunes 16 de octubre a las 10:00 y jueves 19 a las 20:00</strong>
+                </h4>
+                -->
+              </div>
+              <div id="texto_detalles_dia_de_venta_de_entradas" style="display: none;">
+                <h4>
+                  <strong>Primeras entradas a la venta hoy a partir de las 10:00</strong>
+                </h4>
+              </div>
+              <div id="texto_detalles_entradas_a_la_venta" style="display: none;">        
+                <h4>
+                  <strong>Entradas ya a la venta</strong>
+                </h4>
+              </div>
+              <div id="texto_detalles_entradas_proximamente_segunda" style="display: none;">
+                <h4>
+                  <strong>Primeras entradas AGOTADAS
+                  </br>
+                  Entradas disponibles de nuevo </br>jueves 19 de octubre a las 20:00</strong>
+                </h4>
+              </div>
+              <div id="texto_detalles_dia_de_venta_de_entradas_segunda" style="display: none;">
+                <h4>
+                  <strong>Entradas a la venta de nuevo hoy a partir de las 20:00</strong>
+                </h4>
+              </div>
+              <div id="texto_detalles_entradas_a_la_venta_segunda" style="display: none;">
+                <h4>
+                  <strong>Entradas de nuevo a la venta</strong>
+                </h4>
+              </div>
+              <div id="texto_detalles_entradas_agotadas" style="display: none;">
+                <h4>
+                  <strong>Entradas AGOTADAS</strong>
+                </h4>
+                <!--
+                  <p>
+                    <strong>¡Apúntate a nuestra lista de espera!</strong>
+                  </p>
+                -->
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- /.row (nested) -->
+      </div>
+      <!-- /.col-lg-10 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <script>
+
+    // Set the date we're counting down to
+    var detalles_countDown_day = new Date("Oct 16, 2023 00:00:01");
+    var detalles_countDown = new Date("Oct 16, 2023 10:00:00");
+    var detalles_countDown_day_second = new Date("Oct 19, 2023 00:00:01");
+    var detalles_countDown_second = new Date("Oct 19, 2023 20:00:00");
+
+    function cambiar_texto_a_mostrar_detalles () {
+      var detalles_agotadas = document.getElementById("detalles_entradas_agotadas").innerHTML  == 'true';  
+      var detalles_agotadas_primera_tanda = document.getElementById("detalles_entradas_agotadas_primera").innerHTML  == 'true';
+     
+      // Get todays date and time
+      var now = new Date();
+
+      var es_dia_de_publicacion = (now >= detalles_countDown_day);
+      var hay_que_publicar = (now >= detalles_countDown);
+      var es_dia_de_publicacion_segunda = (now >= detalles_countDown_day_second);
+      var hay_que_publicar_segunda = (now >= detalles_countDown_second);
+      
+       document.getElementById("detalles_hora_real_servidor").innerHTML = now;
+
+      // Find the distance between now an the count down date
+      if (detalles_agotadas && detalles_agotadas_primera_tanda
+          && document.getElementById("texto_detalles_entradas_agotadas").style.display != 'block') {
+        // Publicamos el texto de entradas agotadas
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'block';
+      }
+      else if (!detalles_agotadas && !detalles_agotadas_primera_tanda 
+          && hay_que_publicar && !hay_que_publicar_segunda && es_dia_de_publicacion && !es_dia_de_publicacion_segunda 
+          && document.getElementById("texto_detalles_entradas_a_la_venta").style.display != 'block') {
+        // Publicamos el texto de entradas a la venta
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'block';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+      else if (!detalles_agotadas && detalles_agotadas_primera_tanda 
+          && hay_que_publicar && hay_que_publicar_segunda && es_dia_de_publicacion && es_dia_de_publicacion_segunda 
+          && document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display != 'block') {
+        // Publicamos el texto de entradas a la venta de la segunda tanda
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'block';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+      else if (!detalles_agotadas && !detalles_agotadas_primera_tanda 
+          && !hay_que_publicar && !hay_que_publicar_segunda && es_dia_de_publicacion && !es_dia_de_publicacion_segunda 
+          && document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display != 'block'){
+        // Publicamos texto de que hoy a X hora salen a la venta las entradas
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'block';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+      else if (!detalles_agotadas && detalles_agotadas_primera_tanda 
+          && hay_que_publicar && !hay_que_publicar_segunda && es_dia_de_publicacion && es_dia_de_publicacion_segunda
+          && document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display != 'block'){
+        // Publicamos texto de que hoy a X hora salen a la venta las entradas de segunda tanda
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'block';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+      else if (!detalles_agotadas && !detalles_agotadas_primera_tanda 
+          && !hay_que_publicar && !hay_que_publicar_segunda && !es_dia_de_publicacion && !es_dia_de_publicacion_segunda 
+          && document.getElementById("texto_detalles_entradas_proximamente").style.display != 'block') {
+        // Mantenemos publicado el texto entradas proximamente
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'block';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+      else if (!detalles_agotadas && detalles_agotadas_primera_tanda 
+          && hay_que_publicar && !hay_que_publicar_segunda && es_dia_de_publicacion && !es_dia_de_publicacion_segunda 
+          && document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display != 'block') {
+        // Mantenemos publicado el texto entradas primera tanda agotadas y segunda proximamente
+        document.getElementById("texto_detalles_entradas_proximamente").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_proximamente_segunda").style.display = 'block';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas").style.display = 'none';
+        document.getElementById("texto_detalles_dia_de_venta_de_entradas_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_a_la_venta_segunda").style.display = 'none';
+        document.getElementById("texto_detalles_entradas_agotadas").style.display = 'none';
+      }
+    }
+    cambiar_texto_a_mostrar_detalles();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        cambiar_texto_a_mostrar_detalles();
+
+    }, 1000);
+  </script>
+</section>

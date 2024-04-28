@@ -1,0 +1,190 @@
+
+<!--<hr class="section-heading-spacer" style="border-top: 5px solid #4285f4;width: 100%;">-->
+
+<section id="list-volunteers" class="speakers">
+
+  <div class="content-section-a">
+    {% if site.volunteers %}
+    <div class="container">
+        <div class="row text-center">
+          <hr class="section-heading-spacer" style="border-top: 5px solid #4285f4; width: 300px;">
+        </div>
+        <div class="row text-center">
+          <h2 style="text-align: left;">Voluntarias</h2>
+          <div class="col-lg-10 col-lg-offset-2">
+            <!--
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="lead">¡Proximamente publicaremos las ponentes de las charlas y talleres seleccionados! </p>
+                </div>
+            </div>
+            -->
+            {% for volunteer in site.volunteers %}
+              {% assign image_volunteer = volunteer.image | strip_newlines %}
+              {% assign image_card_volunteer = volunteer.image_card | strip_newlines %}
+              {% assign twitter_volunteer = volunteer.twitter_account | strip_newlines %}
+              {% assign instagram_volunteer = volunteer.instagram_account | strip_newlines %}
+              {% assign linkedin_volunteer = volunteer.linkedin_account | strip_newlines %}
+              {% assign linkedin_2_volunteer = volunteer.linkedin_account_2 | strip_newlines %}
+              {% assign web_volunteer = volunteer.web | strip_newlines %}
+              {% assign bio_volunteer = volunteer.bio | strip_newlines %}
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div class="speaker-item">
+                    <a href="#" data-toggle="modal" data-target="#volunteer-{{ forloop.index0 }}">
+                        <span class="fa-stack fa-4x">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+
+                          {% if image_volunteer != ""  %}
+                          <!--<img src="{{ image_volunteer }}_c.jpg" onerror="this.src='img/ponentes/comodin_c.jpg'" class="fa fa-stack-1x text-primary img-circle escala-color"/>-->
+                          {% elsif twitter_volunteer != "" %}
+                          <!--<img src="https://avatars.io/twitter/{{ volunteer.twitter_account }}" class="fa fa-stack-1x text-primary img-circle"/>-->
+                          {% else %}
+                          <!--<i class="fa fa-user fa-stack-1x text-primary"></i>-->
+                          {% endif %}
+
+                          {% if image_volunteer != ""  %}
+                          <img src="{{ image_volunteer }}.jpg" onerror="this.src='img/ponentes/comodin_c.jpg'" class="fa fa-stack-1x text-primary img-circle"/>
+                          {% elsif twitter_volunteer != "" %}
+                          <img src="https://avatars.io/twitter/{{ volunteer.twitter_account }}" class="fa fa-stack-1x text-primary img-circle"/>
+                          {% else %}
+                          <i class="fa fa-user fa-stack-1x text-primary"></i>
+                          {% endif %}
+                        </span>
+                          <h4 style="min-height: 40px !important;">
+                            {{ volunteer.name }}
+                          </h4>
+                          {% if twitter_volunteer != ""  %}
+                          <a href="https://twitter.com/{{ volunteer.twitter_account }}" target="_blank">
+                            <i class="fa fa-twitter fa-fw fa-2x"></i>
+                          </a>
+                          {% endif %}
+                          {% if instagram_volunteer != ""  %}
+                          <a href="https://instagram.com/{{ volunteer.instagram_account }}" target="_blank">
+                            <i class="fa fa-instagram fa-fw fa-2x"></i>
+                          </a>
+                          {% endif %}
+                          {% if linkedin_volunteer != ""  %}
+                          <a href="https://www.linkedin.com/in/{{ volunteer.linkedin_account }}" target="_blank">
+                            <i class="fa fa-linkedin fa-fw fa-2x"></i>
+                          </a>
+                          {% endif %}
+                          {% if linkedin_2_volunteer != ""  %}
+                          <a href="https://www.linkedin.com/in/{{ volunteer.linkedin_account_2 }}" target="_blank">
+                            <i class="fa fa-linkedin fa-fw fa-2x"></i>
+                          </a>
+                          {% endif %}
+                          {% if web_volunteer != ""  %}
+                          <a href="{{ volunteer.web }}" target="_blank">
+                            <i class="fa fa-link fa-fw fa-2x"></i>
+                          </a>
+                          {% endif %}
+                          
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="volunteer-{{ forloop.index0 }}" role="dialog">
+                      <div class="modal-dialog">
+                      
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          {% if image_card_volunteer != ""  %}
+                          <div class="modal-body modal-image-card" style="background-image: url({{ image_card_volunteer }}.jpg);">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          {% else  %}
+                          <div class="modal-body">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <div class="wtm-modal-content-left">
+                                <span class="fa-stack fa-4x">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+
+                                  {% if image_volunteer != ""  %}
+                                  <!--<img src="{{ image_volunteer }}_c.jpg" onerror="this.src='img/ponentes/comodin_c.jpg'" class="fa fa-stack-1x text-primary img-circle escala_color"/>-->
+                                  <img src="{{ image_volunteer }}.jpg" onerror="this.src='img/ponentes/comodin_c.jpg'" class="fa fa-stack-1x text-primary img-circle"/>
+                                  {% elsif twitter_volunteer != "" %}
+                                  <img src="https://avatars.io/twitter/{{ volunteer.twitter_account }}" class="fa fa-stack-1x text-primary img-circle"/>
+                                  {% else %}
+                                  <i class="fa fa-user fa-stack-1x text-primary"></i>
+                                  {% endif %}
+                                </span>
+                                <h4>{{ volunteer.name }}</h4>
+                                  
+                                   {% if twitter_volunteer != ""  %}
+                                    <a href="https://twitter.com/{{ volunteer.twitter_account }}" target="_blank">
+                                        <i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                                    {% endif %}
+                                    {% if instagram_volunteer != ""  %}
+                                    <a href="https://instagram.com/{{ volunteer.instagram_account }}" target="_blank">
+                                        <i class="fa fa-instagram fa-fw fa-2x"></i></a>
+                                    {% endif %}
+                                    {% if linkedin_volunteer != ""  %}
+                                    <a href="https://www.linkedin.com/in/{{ volunteer.linkedin_account }}" target="_blank">
+                                        <i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                                    {% endif %}
+                                    {% if linkedin_2_volunteer != ""  %}
+                                    <a href="https://www.linkedin.com/in/{{ volunteer.linkedin_account_2 }}" target="_blank">
+                                        <i class="fa fa-linkedin fa-fw fa-2x"></i>
+                                    </a>
+                                    {% endif %}
+                                    {% if web_volunteer != ""  %}
+                                    <a href="{{ volunteer.web }}" target="_blank">
+                                        <i class="fa fa-link fa-fw fa-2x"></i></a>
+                                    {% endif %}
+                              </div>
+                              <div class="wtm-modal-content-right text-left">
+                                  {% if bio_volunteer != ""  %}
+                                    <p>{{ volunteer.bio }}</p>
+                                  {% else %}
+                                    <p>Más información próximamente</p>
+                                  {% endif %}
+                                  <div class="visible-xs-block text-center">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+                                  </div>
+                                
+                              </div>
+                          </div>
+                          {% endif %}
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            {% endfor %} 
+            
+            
+          </div>
+          <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+      </div>
+    <!-- /.container -->
+    {% endif %}
+
+    <div class="container">
+      {% if site.volunteers == null %}
+      <div class="row text-center">
+        <hr class="section-heading-spacer" style="border-top: 5px solid #4285f4; width: 300px;">
+      </div>
+      <div class="row text-center">
+        <h2 style="text-align: left;">Voluntarias</h2>
+      </div>
+      {% endif %}
+      <!--
+      <div class="row text-center">
+        <div class="col-lg-12">      
+          <div id="lista-voluntarias">
+            <p class="lead_big">¡Apúntate a nuestra lista para formar parte de las voluntarias del WTMZ23!</p>
+            <p class="lead">Toda la info esta en el formulario</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwsytqpFu-X97CSJg0vOKzTduU7ZxHjf4R02GsdpknHNJmVw/viewform" target="_blank" class="btn btn-dark btn-primary btn-lg">
+              ¡Quiero ser voluntaria!
+            </a>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+
+  </div>
+</section>

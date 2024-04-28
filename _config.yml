@@ -1,0 +1,459 @@
+# Site settings
+title: WTM Zaragoza 2024
+hashtag: wtmz24
+email: womentechmakerszgz@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  El 9 de noviembre de 2024 se celebra la sexta edición del evento Women Techmakers en Zaragoza.
+  Women Techmakers es de una iniciativa promovida a nivel global por Google para visibilizar a las mujeres en el ámbito de la tecnología.
+  Este evento quiere crear una comunidad con visibilidad, generando recursos que impulsen la innovación y la participación de las mujeres en este campo.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+author: Mulleres Tech
+
+# User setting
+owner:
+#email: womentechmakerszgz@gmail.com
+email: wtmz@mullerestech.es
+facebook_username:
+twitter_username: WTMZaragoza
+instagram_username: WTMZaragoza
+github_username: MulleresTechZgz
+address:
+  - line: ETOPIA Centro de Arte y Tecnología
+  - line: Av. de la Ciudad de Soria, 8 (50003) Zaragoza
+  # Feel free to add more lines here 
+telephone:
+copyright:
+
+# Tickets
+sold_out_tickets_first: false
+sold_out_tickets: false
+sold_out_workshop_tickets: false
+
+# Timezone
+timezone: Europe/Madrid
+
+# API settings
+google_api_key:
+
+# Build settings
+markdown: kramdown
+theme: 
+
+#Dates
+#end_c4p: 10/09/2017 23:59:59
+
+#Introduction
+intro_event:
+
+#List for event info
+#event_infos:
+#  - title: ¿Qué es Women Techmakers?
+#    content: Se trata de una iniciativa promovida a nivel global por Google para <strong>visibilizar a las mujeres</strong> en el ámbito de la tecnología.<br/><br/>Women Techmakers quiere crear una comunidad con visibilidad, generando recursos que impulsen la innovación y la participación de las mujeres en este campo.<br/>
+#    image: img/wtmz18/wtmz18_organizacion_y_ponentes.jpg
+#  - title: ¿A quién está dirigido el evento?
+#    content: Se trata de un <strong>evento abierto</strong> a cualquier persona interesada en el mundo de la tecnología.<br/><br/>Queremos abarcar diferentes temas como <strong>nuevas tecnologías, agile, comunicación, desarrollo web, UX</strong> o cualquier tema interesante del sector.<br/><br/>La asistencia al evento está abierta tanto a hombres como a mujeres, pero las ponentes serán únicamente mujeres, ya que uno de los objetivos es darles visibilidad así como ofrecer ayuda y colaboración.
+#    image: img/wtmz18/wtmz18_foto_grupo.jpg
+#  - title: ¿Dónde se ha celebrado hasta ahora?
+#    content: En Barcelona con <span class="wtm-highlight">18</span> ponentes<br/>En Gijón <span class="wtm-highlight">12</span> ponentes<br/>En Jaén <span class="wtm-highlight">3</span> ponentes<br/>En Logroño <span class="wtm-highlight">5</span> ponentes<br/>En Madrid <span class="wtm-highlight">38</span> ponentes<br/>En Tenerife <span class="wtm-highlight">9</span> ponentes<br/>En Valencia <span class="wtm-highlight">16</span> ponentes<br/>En Vigo <span class="wtm-highlight">6</span> ponentes
+#    image: img/imgs_dossier/MapaSpainWTM.jpg
+#  - title: Cifras de WTM Zaragoza 2018
+#    content: Más de 285 asistentes<br/><br/>Repartidos en 2 tracks de charlas más 2 aulas de talleres<br/><br/>94 propuestas recibidas en el Call for Papers<br/><br/>35 ponentes mujeres y 4 mentoras<br/><br/>22 charlas impartidas y 3 talleres<br/><br/>30 patrocinadores y colaboradores<br/><br/>10 medios de comunicacion se hicieron eco de nuestro evento<br/><br/>Conseguimos alcanzar los 1000 followers en Twitter
+#    image: img/wtmz18/wtmz18_organizadoras_power.jpg
+
+#List for organizers
+organizers:
+  - name: Esther Borao
+    text: 
+    image: img/organizadoras/EstherBorao_a
+    image_card: img/organizadoras/fichas/EstherBorao
+    twitter_account: EstherBorao
+    linkedin_account: esther-borao
+    instagram_account: estherborao
+    mail_account: esther@mullerestech.es
+  - name: Miriam Durán
+    text: 
+    image: img/organizadoras/MiriamDuran_a
+    image_card: img/organizadoras/fichas/MiriamDuran
+    twitter_account: miripi
+    linkedin_account: mirianduran
+    instagram_account: 
+    mail_account: miriam@mullerestech.es
+  - name: Cynthia Gálvez
+    text: 
+    image: img/organizadoras/CynthiaGalvez_a
+    image_card: img/organizadoras/fichas/CynthiaGalvez
+    twitter_account: icynthia
+    linkedin_account: cynthiagalvezlopez
+    instagram_account: 
+    mail_account: cynthia@mullerestech.es
+  - name: Paula Gracia
+    text: 
+    image: img/organizadoras/PaulaGracia_a
+    image_card: img/organizadoras/fichas/PaulaGracia
+    twitter_account: CiberEleganzaIT
+    linkedin_account: paulagraciandres
+    instagram_account: 
+    mail_account: 
+  - name: Patricia Heredia
+    text: 
+    image: img/organizadoras/PatriciaHeredia_a
+    image_card: img/organizadoras/fichas/PatriciaHeredia
+    twitter_account: pherediagil
+    linkedin_account: patriciaherediagil
+    instagram_account: pherediagil
+    mail_account: patricia@mullerestech.es
+  - name: Laura Lacarra
+    text: 
+    image: img/organizadoras/LauraLacarra_a
+    image_card: img/organizadoras/fichas/LauraLacarra
+    twitter_account: LauraLacarra
+    linkedin_account: lauralacarra
+    instagram_account: lauralacarra
+    mail_account: laura@mullerestech.es
+  - name: Elena Martín
+    text: 
+    image: img/organizadoras/ElenaMartin_a
+    image_card: img/organizadoras/fichas/ElenaMartin
+    twitter_account: heeleenmm
+    linkedin_account: elenamartinmar
+    instagram_account: heeleenmm
+    mail_account: elena.martinmaraver@gmail.com
+  - name: Cristina Pérez
+    text: 
+    image: img/organizadoras/CristinaPerez_a
+    image_card: img/organizadoras/fichas/CristinaPerez
+    twitter_account: cristinapg
+    linkedin_account: cristinaperezgalan
+    instagram_account: 
+    mail_account: cristina@mullerestech.es
+  - name: Jessica Redrado
+    text: 
+    image: img/organizadoras/JessicaRedrado_a
+    image_card: img/organizadoras/fichas/JessicaRedrado
+    twitter_account: Jessi_Redrado
+    linkedin_account: jessica-redrado-martinez
+    instagram_account: jessi_redrado
+    mail_account: jessica@mullerestech.es
+  - name: Ana Sánchez
+    text: 
+    image: img/organizadoras/AnaSanchez_a
+    image_card: img/organizadoras/fichas/AnaSanchez
+    twitter_account: anasanalva
+    linkedin_account: anasanchezalvarez
+    instagram_account: 
+
+#List for guests
+#guests:
+#  - name: Fulanita Detal
+#    bio: ''
+#    image: img/ponentes/foto4
+#    image_card: 
+#    twitter_account: 
+#    linkedin_account: 
+
+#List for speakers
+#speakers:
+#  - name: Laura Alcober
+#    short_name: Laura Alcober
+#    bio: ''
+#    image: img/ponentes/LauraAlcober
+#    image_card: img/ponentes/fichas/LauraAlcober
+#    twitter_account: 
+#    linkedin_account: laura-alcober-prieto-7372b2126
+#    instagram_account:
+
+#List for mentors
+#mentors:
+#  - name: Fulanita Detal
+#    short_name: Fulanita Detal
+#    bio: 'Fulanita Detal'
+#    image: img/ponentes/foto2_1
+#    image_card: 
+#    twitter_account: 
+
+#List for volunteers
+#volunteers:
+#  - name: Silvia Ballarín Enjuanes
+#    short_name: Silvia Ballarín
+#    bio: 'Soy una persona apasionada de las finanzas y si puede ser con programitas por el medio que nos faciliten la vida mucho mejor. Me gusta la naturaleza y me llena estar con mis amigos.'
+#    image: img/voluntarias/SilviaBallarin
+#    image_card: 
+#    twitter_account: 
+#    instagram_account: sballarine
+#    linkedin_account: silviaballarin
+
+#List for sponsors
+#sponsors_platinum:
+#  - name: Empresa Genérica
+#    text: 
+#    image: img/patrocinadores/generico/empresa1.png
+#    web: #
+#    twitter: 
+#    instagram: 
+
+#sponsors_gold:
+#  - name: Deiser
+#    text: 
+#    image: img/patrocinadores/gold/deiser.png
+#    web: https://www.deiser.com/es/
+#    twitter: deiser
+#    instagram: deiserteam
+
+#sponsors_silver:
+#  - name: Empresa Genérica
+#    text: 
+#    image: img/patrocinadores/generico/empresa1.png
+#    web: #
+#    twitter: 
+#    instagram:  
+
+#sponsors_others:
+#  - name: Eboca
+#    text: 
+#    image: img/patrocinadores/colaboradores/eboca.png
+#    web: https://www.eboca.com/
+#    twitter: eboca
+#    instagram: eboca
+
+# Agenda
+# talks_track_1:
+#   - time: '09:30-10:00'
+#     track: all
+#     name: 'REGISTRO'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '10:00-10:15'
+#     track: all
+#     name: 'PRESENTACIÓN Staff WTM Zaragoza'
+#     #second_name: ''
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '10:15-10:50'
+#     track: 1
+#     name: 'Trucos ChatGPT: escribe prompts como si fueras un pro'
+#     descrip: ''
+#     topics: 'Inteligencia Artificial'
+#     speaker: 'Cristina Notario Lendrino'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla001
+#     url_youtube: JEdupBhA3KQ
+#   - time: '10:55-11:30'
+#     track: 1
+#     name: 'Al ritmo de Beat Saber llevando el UX a otro nivel'
+#     descrip: ''
+#     topics: 'UX, Diseño, accesibilidad'
+#     speaker: 'Coral Corbacho, Miriam de Tomás'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla002
+#     url_youtube: lMAi1iEUPXM
+#   - time: '11:35-12:10'
+#     track: 1
+#     name: 'Diseño vs Desarrollo. El milagro del match entre dos polos opuestos'
+#     descrip: ''
+#     topics: 'Programación / Desarrollo, UX, Diseño'
+#     speaker: 'Sonia Martínez Becerra'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla003
+#     url_youtube: 4rTMRcexWaI
+#   - time: '12:15-12:45'
+#     track: all
+#     name: 'DESCANSO CAFÉ'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '12:45-13:20'
+#     track: 1
+#     name: 'El aula Kanhuan!'
+#     descrip: ''
+#     topics: 'Robótica, Programación / Desarrollo, Educación, Inteligencia Artificial, Metodologías Ágiles, Comunicación'
+#     speaker: 'Noelia Cebrián Marta'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla004
+#     url_youtube: 5LONDHgcBPg
+#   - time: '13:25-14:00'
+#     track: 1
+#     name: '¿Computación Cuántica: El Futuro de la Tecnología o Ciencia Ficción?'
+#     descrip: ''
+#     topics: 'Programación / Desarrollo, Inteligencia Artificial, Nuevas tecnologías emergentes. Computación cuántica'
+#     speaker: 'Pilar Mollá Ortigas'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla005
+#     url_youtube: 1t6i1ZSYLW4
+#   - time: '14:05-14:25'
+#     track: 1
+#     name: 'Charla pendiente de anunciar'
+#     descrip: ''
+#     topics: ''
+#     speaker: ''
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: 
+#     url_youtube:
+#   - time: '14:30-14:35'
+#     track: all
+#     name: 'Fotografía de grupo'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '14:35-16:00'
+#     track: all
+#     name: 'COMIDA Y NETWORKING (Cantina)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '16:00-16:35'
+#     track: 1
+#     name: 'Cómo la tecnología impulsa la revolución de las prótesis para el cáncer de mama'
+#     descrip: ''
+#     topics: 'Motivación, Diseño, Impresión 3D y Emprendimiento Social'
+#     speaker: 'Sara Gascon Duran y Lidia Gomez'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla006
+#     url_youtube: b4lkKZxfv3U
+#   - time: '16:40-17:15'
+#     track: 1
+#     name: 'Dungeons & Datos: Bestiario de antipatrones y cómo derrotarlos'
+#     descrip: ''
+#     topics: 'Programación / Desarrollo, Data'
+#     speaker: 'Laura Alcober Prieto'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla007
+#     url_youtube: gIFy67KqDLo
+#   - time: '17:20-17:55'
+#     track: 1
+#     name: 'Las Self-Orgs y cómo llevar tu empresa a un nuevo paradigma'
+#     descrip: ''
+#     topics: 'Nuevos Modelos Gobernanza'
+#     speaker: 'Miriam Moreno Bellido'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Charla008
+#     url_youtube: 9LF1k6b9pPs
+#   - time: '18:00-18:25'
+#     track: all
+#     name: 'CIERRE Staff WTM Zaragoza'
+#     #second_name: ''
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '18:25-18:30'
+#     track: all
+#     name: 'Fotografía de grupo'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '18:30-21:00'
+#     track: all
+#     name: 'DJ Set y Networking (Cantina)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+  
+# talks_track_2: 
+
+# workshops_track_1: 
+#   - time: '09:30-10:00'
+#     track: all
+#     name: 'REGISTRO'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '10:00-10:15'
+#     track: all
+#     name: 'PRESENTACIÓN Staff WTM Zaragoza (Auditorio)'
+#     #second_name: ''
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '10:15-12:10'
+#     track: 1
+#     name: 'Cobots en acción'
+#     descrip: ''
+#     topics: ''
+#     speaker: 'María Pilar Sanchez Sarasa'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Taller001
+#     url_youtube:
+#   - time: '12:15-12:45'
+#     track: all
+#     name: 'DESCANSO CAFÉ'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '12:45-14:25'
+#     track: 1
+#     name: 'Nobel Run. Cómo visibilizar a mujeres científicas e inventoras jugando'
+#     descrip: ''
+#     topics: ''
+#     speaker: 'Lorena Fernandez'
+#     bio_speaker: 
+#     twitter_speaker: 
+#     image_card: img/charlas/Taller002
+#     url_youtube: 
+#   - time: '14:30-14:35'
+#     track: all
+#     name: 'Fotografía de grupo (Auditorio)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '14:35-16:00'
+#     track: all
+#     name: 'COMIDA Y NETWORKING (Cantina)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '16:00-18:00'
+#     track: 1
+#     name: ''
+#     descrip: ''
+#     speaker: ''
+#     bio_speaker: 
+#     twitter_speaker: 
+#     url_youtube: 
+#   - time: '18:00-18:25'
+#     track: all
+#     name: 'CIERRE Staff WTM Zaragoza (Auditorio)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '18:25-18:30'
+#     track: all
+#     name: 'Fotografía de grupo (Auditorio)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+#   - time: '18:30-21:00'
+#     track: all
+#     name: 'DJ Set y Networking (Cantina)'
+#     descrip: 
+#     speaker: 
+#     bio_speaker: 
+#     twitter_speaker: 
+
+# workshops_track_2: 
